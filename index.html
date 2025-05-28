@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Link Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 Link Manager</h1>
+        <p class="subtitle">Simpan dan akses link favorit Anda dari perangkat mana pun</p>
+        
+        <div class="add-link-form">
+            <input type="text" id="linkTitle" placeholder="Judul Link" required>
+            <input type="url" id="linkUrl" placeholder="https://example.com" required>
+            <textarea id="linkDescription" placeholder="Deskripsi (opsional)"></textarea>
+            <button id="addBtn">Simpan Link</button>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cari link...">
+            <button id="searchBtn">Cari</button>
+        </div>
+        
+        <div class="link-list" id="linkList">
+            <div class="loading">Memuat link...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
